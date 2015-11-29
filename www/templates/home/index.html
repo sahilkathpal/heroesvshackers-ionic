@@ -1,0 +1,20 @@
+<ion-view view-title="Contacts">
+  <ion-content overflow-scroll="true">
+    
+		<label class="item item-input">
+	    <i class="icon ion-search placeholder-icon"></i>
+	    <input ng-model="fil" type="text" placeholder="Search">
+	  </label>
+
+    <div class="list">
+
+	    <a ng-repeat="user in friends | filter: fil" class="item item-avatar" href="#/tab/home/{{user.id}}">
+	      <img src="img/order_tomorrow.jpg">
+	      <h2>{{user.name}}</h2>
+	      <p>{{user.email}}</p>
+	    </a>
+
+		</div>
+    
+  </ion-content>
+</ion-view>

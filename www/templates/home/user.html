@@ -1,0 +1,32 @@
+<ion-view view-title="Send money">
+  <ion-content>
+
+  	<div class="list card">
+		  <div class="item item-avatar">
+		    <img src="img/order_tomorrow.jpg">
+		    <h2>{{friend.name}}</h2>
+		    <p>{{friend.email}}</p>
+		  </div>
+  	</div>
+
+  	<div class="list list-inset">
+		  <label class="item item-input">
+		    <input ng-model="obj.amount" type="number" placeholder="Amount">
+		  </label>
+		  <label class="item item-input">
+		    <input ng-model="obj.message" type="text" placeholder="Message (optional)">
+		  </label>
+
+		  <button ng-hide="processing" type="button" ng-click="sendMoney()" class="button button-block button-positive">Send</button>
+		  <br>
+		  <div ng-show="processing">
+		  	<ion-spinner style="margin-left: 45%" icon="lines"></ion-spinner>
+		  	<br>
+		  	<br>
+		  	<br>
+		  	<p style="text-align: center;">Keep Calm! Your transaction is being permanently etched in the Blockchain.</p>
+		  </div>
+		</div>
+
+	</ion-content>
+</ion-view>

@@ -1,0 +1,25 @@
+<ion-view view-title="Login">
+  <ion-content class="padding">
+
+  <form name="loginForm" ng-submit="login()">
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Email</span>
+        <input required ng-model="user.email" type="email" name="email" placeholder="Email">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Password</span>
+        <input required ng-model="user.password" type="password" placeholder="Password">
+      </label>
+      <button ng-hide="waiting" type="submit" class="button button-block button-positive">go !</button>
+    </div>
+  </form>
+  
+  <br>
+
+  <div ng-show="waiting">
+    <ion-spinner style="margin-left: 45%" icon="lines"></ion-spinner>
+  </div>
+  
+  </ion-content>
+</ion-view>
